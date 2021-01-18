@@ -6,9 +6,9 @@ import javax.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
-    private double price;
+    public Integer id;
+    public String name;
+    public double price;
     @Enumerated(EnumType.STRING)
-    private Currency currency;
+    public Currency currency;
 }

@@ -19,7 +19,7 @@
     <tr th:if="${products.empty}">
         <td colspan="2"> No Products Available </td>
     </tr>
-    <tr th:each="book : ${products}">
+    <tr th:each="book:${products}">
         <td><span th:text="${book.name}"> Name </span></td>
         <td><span th:text="${book.price}"> Price </span></td>
     </tr>
