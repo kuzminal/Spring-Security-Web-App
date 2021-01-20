@@ -37,5 +37,8 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/main", true);
         http.authorizeRequests()
                 .anyRequest().authenticated();
+        http.csrf(c -> {
+            c.ignoringAntMatchers("/product/add");
+        });
     }
 }
